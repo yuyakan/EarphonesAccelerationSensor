@@ -12,19 +12,18 @@ import AVFoundation
 import GoogleMobileAds
 
 class MeasurementViewController: UIViewController, CMHeadphoneMotionManagerDelegate, ObservableObject{
-    @Published var Name = ""
+    @Published var fileName = ""
     @Published var timeCounter = "0.00"
-    @Published var showingAlert = false
-    @Published var showingAlert3 = false
+    @Published var saveCompleteShowingAlert = false
+    @Published var notNameShowingAlert = false
     @Published var start = false
     @Published var status = "Waiting for measurement"
     @Published var stopSave = false
     @ObservedObject var setting = SettingInfo.shared
     
-    let Airpods = CMHeadphoneMotionManager()
+    let airpods = CMHeadphoneMotionManager()
     
     var graph: [Double] = []
-    
     var time : [Double] = []
     var nowTime: Double = 0.0
     
@@ -35,7 +34,7 @@ class MeasurementViewController: UIViewController, CMHeadphoneMotionManagerDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Airpods.delegate = self
+        airpods.delegate = self
     }
 
     override func viewWillAppear(_ flag: Bool){
@@ -43,24 +42,31 @@ class MeasurementViewController: UIViewController, CMHeadphoneMotionManagerDeleg
         UIApplication.shared.isIdleTimerDisabled = true
     }
     
+    
+    
     func startCalc(){
-        showingAlert = false
-        showingAlert3 = false
-        if Name == "" {
-            showingAlert3 = true
+        //ファイル名がない場合
+        if fileName == "" {
+            notNameShowingAlert = true
             return
         }
         start = true
         
+        //値のリセット
+        saveCompleteShowingAlert = false
+        notNameShowingAlert = false
+        
         graph = []
         nowTime = 0.0
-        time.removeAll()
         
+        time.removeAll()
         X.removeAll()
         Y.removeAll()
         Z.removeAll()
-    
-        Airpods.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {[weak self] motion, error  in
+        
+        //Airpodsのデータ取得を開始
+        status = "During measurement"
+        airpods.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {[weak self] motion, error  in
             guard let motion = motion else { return }
             self?.getData(motion)
         })
@@ -70,6 +76,7 @@ class MeasurementViewController: UIViewController, CMHeadphoneMotionManagerDeleg
     func getData(_ data: CMDeviceMotion){
         let x, y, z : Double
         
+        //選択されたセンサのデータをX,Y,Zに記録
         if self.setting.checkedSensor[0] {
             x = data.userAcceleration.x
             y = data.userAcceleration.y
@@ -91,57 +98,55 @@ class MeasurementViewController: UIViewController, CMHeadphoneMotionManagerDeleg
             z = data.attitude.yaw
             graph.append(y + 0.3)
         }
-        
-        let t = data.timestamp
-        status = "During measurement"
-
-        if (nowTime == 0.0){
-            nowTime = t
-        }
-        
-        timeCounter = String(format: "%0.2f",t - nowTime)
-        time.append(t - nowTime)
-        
         X.append(x)
         Y.append(y)
         Z.append(z)
+        
+        //計測開始からの時間をtimeに記録
+        let t = data.timestamp
+        if (nowTime == 0.0){
+            nowTime = t
+        }
+        time.append(t - nowTime)
+        
+        //画面の計測時間を更新
+        timeCounter = String(format: "%0.2f",t - nowTime)
     }
  
     func stopCalc(){
-        Airpods.stopDeviceMotionUpdates()
+        //計測の停止
+        airpods.stopDeviceMotionUpdates()
         if nowTime == 0.0 {
             return
         }
-        showingAlert = false
+        saveCompleteShowingAlert = false
     }
     
     func saveFile(){
         do {
+            // csvファイルに計測データを書き込む
             var csv = ""
-            
-            csv = self.createCsv(Data1: X, Data2: Y, Data3: Z)
-
-            let path = NSHomeDirectory() + "/Documents/" + Name + ".csv"
+            csv = self.createCsv(X: X, Y: Y, Z: Z)
+            let path = NSHomeDirectory() + "/Documents/" + fileName + ".csv"
             try csv.write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
+            
             status = "End of measurement"
-            print("Saved")
-            showingAlert = true
-            Name = ""
-            print( graph)
+            saveCompleteShowingAlert = true
+            fileName = ""
         }
         catch {
             print("Failed to save: \(error)")
-            showingAlert = false
+            saveCompleteShowingAlert = false
         }
     }
     
-    func createCsv(Data1: [Double], Data2: [Double], Data3: [Double]) -> String {
+    func createCsv(X: [Double], Y: [Double], Z: [Double]) -> String {
         //計測データを一つにまとめる
-        var csv = zip(zip(zip(time, Data1)
+        var csv = zip(zip(zip(time, X)
                             .map { nums in "\(nums.0), \(nums.1)" }
-                          , Data2)
+                          , Y)
                         .map { nums in "\(nums.0), \(nums.1)" }
-                      , Data3)
+                      , Z)
                     .map { nums in "\(nums.0), \(nums.1)" }
                     .joined(separator: "\n")
         
@@ -151,7 +156,7 @@ class MeasurementViewController: UIViewController, CMHeadphoneMotionManagerDeleg
             Title = "time, pitch, roll, yaw\n"
         } else {
             Title = "time, x, y, z, T\n"
-            Total = Data1.map{$0 * $0} + Data2.map{$0 * $0} + Data3.map{$0 * $0}
+            Total = X.map{$0 * $0} + Y.map{$0 * $0} + Z.map{$0 * $0}
             Total = Total.map{sqrt($0)}
             csv = zip(csv, Total).map { nums in "\(nums.0), \(nums.1)" }
             .joined(separator: "\n")

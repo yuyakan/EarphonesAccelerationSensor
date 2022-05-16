@@ -13,7 +13,7 @@
 		06266784273C22DB0072201A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06266783273C22DB0072201A /* Preview Assets.xcassets */; };
 		0655AA622742CCDE001EB8DE /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 0655AA612742CCDE001EB8DE /* Charts */; };
 		06602B6027441E9A009FFACD /* DeviceTraitStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06602B5F27441E99009FFACD /* DeviceTraitStatus.swift */; };
-		067CB253274120C500899DD3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB252274120C500899DD3 /* SettingViewController.swift */; };
+		067CB253274120C500899DD3 /* SettingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB252274120C500899DD3 /* SettingInfo.swift */; };
 		06B812CE27410EEB00FD2F79 /* MeasurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B812CD27410EEA00FD2F79 /* MeasurementViewController.swift */; };
 		06B812D027410F0400FD2F79 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B812CF27410F0400FD2F79 /* SettingView.swift */; };
 		4B93F90D283159090076288F /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B93F90C283159090076288F /* AdView.swift */; };
@@ -32,7 +32,7 @@
 		06266780273C22DB0072201A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06266783273C22DB0072201A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		06602B5F27441E99009FFACD /* DeviceTraitStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTraitStatus.swift; sourceTree = "<group>"; };
-		067CB252274120C500899DD3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		067CB252274120C500899DD3 /* SettingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingInfo.swift; sourceTree = "<group>"; };
 		067CB2562741541B00899DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		06B812CD27410EEA00FD2F79 /* MeasurementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementViewController.swift; sourceTree = "<group>"; };
 		06B812CF27410F0400FD2F79 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 				0626677E273C22D50072201A /* MesurementView.swift */,
 				06602B5F27441E99009FFACD /* DeviceTraitStatus.swift */,
 				06B812CF27410F0400FD2F79 /* SettingView.swift */,
-				067CB252274120C500899DD3 /* SettingViewController.swift */,
+				067CB252274120C500899DD3 /* SettingInfo.swift */,
 				06B812CD27410EEA00FD2F79 /* MeasurementViewController.swift */,
 				06266780273C22DB0072201A /* Assets.xcassets */,
 				06266782273C22DB0072201A /* Preview Content */,
@@ -251,7 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06602B6027441E9A009FFACD /* DeviceTraitStatus.swift in Sources */,
-				067CB253274120C500899DD3 /* SettingViewController.swift in Sources */,
+				067CB253274120C500899DD3 /* SettingInfo.swift in Sources */,
 				06B812CE27410EEB00FD2F79 /* MeasurementViewController.swift in Sources */,
 				06B812D027410F0400FD2F79 /* SettingView.swift in Sources */,
 				4BA3CD6427ABA56600C60C20 /* ViewExtension.swift in Sources */,
