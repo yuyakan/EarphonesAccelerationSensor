@@ -10,7 +10,6 @@ import SwiftUI
 
 struct SettingView: View {
     @ObservedObject var setting = SettingInfo.shared
-    @State var flag: Bool = false
     
     let sensorKind: [String] = [
         "userAcceleration",

@@ -66,7 +66,7 @@ private extension MeasurementView {
     var buttonsOnPortrait: some View {
         VStack{
             HStack{
-                TextField("File name to save", text: $measuremetViewController.Name, onCommit: {
+                TextField("File name to save", text: $measuremetViewController.fileName, onCommit: {
                     measuremetViewController.status = "Waiting for measurement"
                 })
                     .frame(width: 200.0)
@@ -88,7 +88,7 @@ private extension MeasurementView {
                         .frame(width: 160.0, height: 120.0)
                         .background(Color("startColor"))
                         .clipShape(Circle())
-                }.alert(isPresented: $measuremetViewController.showingAlert3) {
+                }.alert(isPresented: $measuremetViewController.notNameShowingAlert) {
                     Alert(title: Text("The file name to save has not been entered"), message: Text("Please enter the file name to save"))
                 }
                 if(measuremetViewController.stopSave){
@@ -118,7 +118,7 @@ private extension MeasurementView {
                             .background(Color("startColor"))
                             .clipShape(Circle())
                     }.disabled(!measuremetViewController.start)
-                    .alert("Save completed", isPresented: $measuremetViewController.showingAlert) {
+                    .alert("Save completed", isPresented: $measuremetViewController.saveCompleteShowingAlert) {
                         Button("OK") {
                             showIntersitialAd.toggle()
                             Thread.sleep(forTimeInterval: 0.5)
@@ -146,10 +146,10 @@ private extension MeasurementView {
                     .frame(width: 160.0, height: 120.0)
                     .background(Color("startColor"))
                     .clipShape(Circle())
-            }.alert(isPresented: $measuremetViewController.showingAlert3) {
+            }.alert(isPresented: $measuremetViewController.notNameShowingAlert) {
                 Alert(title: Text("The file name to save has not been entered"), message: Text("Please enter the file name to save"))
             }
-            TextField("File name to save", text: $measuremetViewController.Name, onCommit: {
+            TextField("File name to save", text: $measuremetViewController.fileName, onCommit: {
                 measuremetViewController.status = "Waiting for measurement"
             })
                 .frame(width: 200.0)
@@ -187,7 +187,7 @@ private extension MeasurementView {
                         .background(Color("startColor"))
                         .clipShape(Circle())
                 }.disabled(!measuremetViewController.start)
-                .alert("Save completed", isPresented: $measuremetViewController.showingAlert) {
+                .alert("Save completed", isPresented: $measuremetViewController.saveCompleteShowingAlert) {
                     Button("OK") {
                         showIntersitialAd.toggle()
                         Thread.sleep(forTimeInterval: 0.5)
