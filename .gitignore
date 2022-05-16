@@ -1,0 +1,4 @@
+*.png
+Pods/*
+*.plist
+*.json

@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0626677D273C22D50072201A /* AirpodsAcceleratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626677C273C22D50072201A /* AirpodsAcceleratorApp.swift */; };
+		0626677F273C22D50072201A /* MesurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0626677E273C22D50072201A /* MesurementView.swift */; };
+		06266781273C22DB0072201A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06266780273C22DB0072201A /* Assets.xcassets */; };
+		06266784273C22DB0072201A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06266783273C22DB0072201A /* Preview Assets.xcassets */; };
+		0655AA622742CCDE001EB8DE /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 0655AA612742CCDE001EB8DE /* Charts */; };
+		06602B6027441E9A009FFACD /* DeviceTraitStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06602B5F27441E99009FFACD /* DeviceTraitStatus.swift */; };
+		067CB253274120C500899DD3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067CB252274120C500899DD3 /* SettingViewController.swift */; };
+		06B812CE27410EEB00FD2F79 /* MeasurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B812CD27410EEA00FD2F79 /* MeasurementViewController.swift */; };
+		06B812D027410F0400FD2F79 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B812CF27410F0400FD2F79 /* SettingView.swift */; };
+		4B93F90D283159090076288F /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B93F90C283159090076288F /* AdView.swift */; };
+		4B9BC34C27A8148C00DBECBD /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BC34B27A8148C00DBECBD /* AdController.swift */; };
+		4BA3CD6027AB6FDA00C60C20 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3CD5F27AB6FDA00C60C20 /* InterstitialAdView.swift */; };
+		4BA3CD6227ABA47200C60C20 /* FullScreenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3CD6127ABA47200C60C20 /* FullScreenModifier.swift */; };
+		4BA3CD6427ABA56600C60C20 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3CD6327ABA56600C60C20 /* ViewExtension.swift */; };
+		723ED1531609867AB8BC4298 /* Pods_Earphones_Acceleration_Sensor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0AD56D22F49B07CC71879FB /* Pods_Earphones_Acceleration_Sensor.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		02EACD405D663A74EDFF1945 /* Pods-Earphones Acceleration Sensor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earphones Acceleration Sensor.debug.xcconfig"; path = "Target Support Files/Pods-Earphones Acceleration Sensor/Pods-Earphones Acceleration Sensor.debug.xcconfig"; sourceTree = "<group>"; };
+		06266779273C22D50072201A /* Earphones Acceleration Sensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Earphones Acceleration Sensor.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0626677C273C22D50072201A /* AirpodsAcceleratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirpodsAcceleratorApp.swift; sourceTree = "<group>"; };
+		0626677E273C22D50072201A /* MesurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesurementView.swift; sourceTree = "<group>"; };
+		06266780273C22DB0072201A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06266783273C22DB0072201A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		06602B5F27441E99009FFACD /* DeviceTraitStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTraitStatus.swift; sourceTree = "<group>"; };
+		067CB252274120C500899DD3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		067CB2562741541B00899DD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		06B812CD27410EEA00FD2F79 /* MeasurementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementViewController.swift; sourceTree = "<group>"; };
+		06B812CF27410F0400FD2F79 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		3B89C654F8E04A85B864C5C7 /* Pods-Earphones Acceleration Sensor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earphones Acceleration Sensor.release.xcconfig"; path = "Target Support Files/Pods-Earphones Acceleration Sensor/Pods-Earphones Acceleration Sensor.release.xcconfig"; sourceTree = "<group>"; };
+		4B93F90C283159090076288F /* AdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
+		4B9BC34B27A8148C00DBECBD /* AdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdController.swift; sourceTree = "<group>"; };
+		4BA3CD5F27AB6FDA00C60C20 /* InterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
+		4BA3CD6127ABA47200C60C20 /* FullScreenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenModifier.swift; sourceTree = "<group>"; };
+		4BA3CD6327ABA56600C60C20 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		D0AD56D22F49B07CC71879FB /* Pods_Earphones_Acceleration_Sensor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Earphones_Acceleration_Sensor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06266776273C22D50072201A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0655AA622742CCDE001EB8DE /* Charts in Frameworks */,
+				723ED1531609867AB8BC4298 /* Pods_Earphones_Acceleration_Sensor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06266770273C22D50072201A = {
+			isa = PBXGroup;
+			children = (
+				0626677B273C22D50072201A /* AirpodsAccelerator */,
+				0626677A273C22D50072201A /* Products */,
+				82871A67CDAF11096725DCF3 /* Pods */,
+				34A363ABF628BF5276BB3F95 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0626677A273C22D50072201A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06266779273C22D50072201A /* Earphones Acceleration Sensor.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0626677B273C22D50072201A /* AirpodsAccelerator */ = {
+			isa = PBXGroup;
+			children = (
+				067CB2562741541B00899DD3 /* Info.plist */,
+				4B93F90E28315BB90076288F /* Ad */,
+				0626677C273C22D50072201A /* AirpodsAcceleratorApp.swift */,
+				0626677E273C22D50072201A /* MesurementView.swift */,
+				06602B5F27441E99009FFACD /* DeviceTraitStatus.swift */,
+				06B812CF27410F0400FD2F79 /* SettingView.swift */,
+				067CB252274120C500899DD3 /* SettingViewController.swift */,
+				06B812CD27410EEA00FD2F79 /* MeasurementViewController.swift */,
+				06266780273C22DB0072201A /* Assets.xcassets */,
+				06266782273C22DB0072201A /* Preview Content */,
+			);
+			path = AirpodsAccelerator;
+			sourceTree = "<group>";
+		};
+		06266782273C22DB0072201A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				06266783273C22DB0072201A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		34A363ABF628BF5276BB3F95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D0AD56D22F49B07CC71879FB /* Pods_Earphones_Acceleration_Sensor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4B93F90E28315BB90076288F /* Ad */ = {
+			isa = PBXGroup;
+			children = (
+				4B93F90C283159090076288F /* AdView.swift */,
+				4B9BC34B27A8148C00DBECBD /* AdController.swift */,
+				4BA3CD5F27AB6FDA00C60C20 /* InterstitialAdView.swift */,
+				4BA3CD6127ABA47200C60C20 /* FullScreenModifier.swift */,
+				4BA3CD6327ABA56600C60C20 /* ViewExtension.swift */,
+			);
+			path = Ad;
+			sourceTree = "<group>";
+		};
+		82871A67CDAF11096725DCF3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02EACD405D663A74EDFF1945 /* Pods-Earphones Acceleration Sensor.debug.xcconfig */,
+				3B89C654F8E04A85B864C5C7 /* Pods-Earphones Acceleration Sensor.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06266778273C22D50072201A /* Earphones Acceleration Sensor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06266787273C22DB0072201A /* Build configuration list for PBXNativeTarget "Earphones Acceleration Sensor" */;
+			buildPhases = (
+				A241AF0A1F3419224B7F3F3D /* [CP] Check Pods Manifest.lock */,
+				06266775273C22D50072201A /* Sources */,
+				06266776273C22D50072201A /* Frameworks */,
+				06266777273C22D50072201A /* Resources */,
+				9DD4E49DEB20D116AD77539A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Earphones Acceleration Sensor";
+			packageProductDependencies = (
+				0655AA612742CCDE001EB8DE /* Charts */,
+			);
+			productName = AirpodsAccelerator;
+			productReference = 06266779273C22D50072201A /* Earphones Acceleration Sensor.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06266771273C22D50072201A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					06266778273C22D50072201A = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 06266774273C22D50072201A /* Build configuration list for PBXProject "Earphones Acceleration Sensor" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06266770273C22D50072201A;
+			packageReferences = (
+				0655AA602742CCDE001EB8DE /* XCRemoteSwiftPackageReference "swiftui-charts" */,
+			);
+			productRefGroup = 0626677A273C22D50072201A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06266778273C22D50072201A /* Earphones Acceleration Sensor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06266777273C22D50072201A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06266784273C22DB0072201A /* Preview Assets.xcassets in Resources */,
+				06266781273C22DB0072201A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9DD4E49DEB20D116AD77539A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Earphones Acceleration Sensor/Pods-Earphones Acceleration Sensor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Earphones Acceleration Sensor/Pods-Earphones Acceleration Sensor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Earphones Acceleration Sensor/Pods-Earphones Acceleration Sensor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A241AF0A1F3419224B7F3F3D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Earphones Acceleration Sensor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06266775273C22D50072201A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06602B6027441E9A009FFACD /* DeviceTraitStatus.swift in Sources */,
+				067CB253274120C500899DD3 /* SettingViewController.swift in Sources */,
+				06B812CE27410EEB00FD2F79 /* MeasurementViewController.swift in Sources */,
+				06B812D027410F0400FD2F79 /* SettingView.swift in Sources */,
+				4BA3CD6427ABA56600C60C20 /* ViewExtension.swift in Sources */,
+				4BA3CD6227ABA47200C60C20 /* FullScreenModifier.swift in Sources */,
+				0626677F273C22D50072201A /* MesurementView.swift in Sources */,
+				4B9BC34C27A8148C00DBECBD /* AdController.swift in Sources */,
+				0626677D273C22D50072201A /* AirpodsAcceleratorApp.swift in Sources */,
+				4B93F90D283159090076288F /* AdView.swift in Sources */,
+				4BA3CD6027AB6FDA00C60C20 /* InterstitialAdView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		06266785273C22DB0072201A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		06266786273C22DB0072201A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06266788273C22DB0072201A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02EACD405D663A74EDFF1945 /* Pods-Earphones Acceleration Sensor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AirpodsAccelerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AirpodsAccelerator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "Airpodsの加速度データを取得します";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kanbe.AirpodsAccelerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06266789273C22DB0072201A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B89C654F8E04A85B864C5C7 /* Pods-Earphones Acceleration Sensor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AirpodsAccelerator/Preview Content\"";
+				DEVELOPMENT_TEAM = 2NGCBTHK5K;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AirpodsAccelerator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
+				INFOPLIST_KEY_NSMotionUsageDescription = "Airpodsの加速度データを取得します";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kanbe.AirpodsAccelerator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06266774273C22D50072201A /* Build configuration list for PBXProject "Earphones Acceleration Sensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06266785273C22DB0072201A /* Debug */,
+				06266786273C22DB0072201A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06266787273C22DB0072201A /* Build configuration list for PBXNativeTarget "Earphones Acceleration Sensor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06266788273C22DB0072201A /* Debug */,
+				06266789273C22DB0072201A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0655AA602742CCDE001EB8DE /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-charts.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0655AA612742CCDE001EB8DE /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0655AA602742CCDE001EB8DE /* XCRemoteSwiftPackageReference "swiftui-charts" */;
+			productName = Charts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 06266771273C22D50072201A /* Project object */;
+}
