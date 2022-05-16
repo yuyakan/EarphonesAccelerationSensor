@@ -17,6 +17,8 @@
 		06B812CE27410EEB00FD2F79 /* MeasurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B812CD27410EEA00FD2F79 /* MeasurementViewController.swift */; };
 		06B812D027410F0400FD2F79 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B812CF27410F0400FD2F79 /* SettingView.swift */; };
 		4B93F90D283159090076288F /* AdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B93F90C283159090076288F /* AdView.swift */; };
+		4B93F910283239820076288F /* MeasurementPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B93F90F283239820076288F /* MeasurementPresenter.swift */; };
+		4B93F912283246950076288F /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B93F911283246950076288F /* Model.swift */; };
 		4B9BC34C27A8148C00DBECBD /* AdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9BC34B27A8148C00DBECBD /* AdController.swift */; };
 		4BA3CD6027AB6FDA00C60C20 /* InterstitialAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3CD5F27AB6FDA00C60C20 /* InterstitialAdView.swift */; };
 		4BA3CD6227ABA47200C60C20 /* FullScreenModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3CD6127ABA47200C60C20 /* FullScreenModifier.swift */; };
@@ -38,6 +40,8 @@
 		06B812CF27410F0400FD2F79 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		3B89C654F8E04A85B864C5C7 /* Pods-Earphones Acceleration Sensor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Earphones Acceleration Sensor.release.xcconfig"; path = "Target Support Files/Pods-Earphones Acceleration Sensor/Pods-Earphones Acceleration Sensor.release.xcconfig"; sourceTree = "<group>"; };
 		4B93F90C283159090076288F /* AdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdView.swift; sourceTree = "<group>"; };
+		4B93F90F283239820076288F /* MeasurementPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementPresenter.swift; sourceTree = "<group>"; };
+		4B93F911283246950076288F /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4B9BC34B27A8148C00DBECBD /* AdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdController.swift; sourceTree = "<group>"; };
 		4BA3CD5F27AB6FDA00C60C20 /* InterstitialAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdView.swift; sourceTree = "<group>"; };
 		4BA3CD6127ABA47200C60C20 /* FullScreenModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenModifier.swift; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				06B812CF27410F0400FD2F79 /* SettingView.swift */,
 				067CB252274120C500899DD3 /* SettingViewController.swift */,
 				06B812CD27410EEA00FD2F79 /* MeasurementViewController.swift */,
+				4B93F90F283239820076288F /* MeasurementPresenter.swift */,
+				4B93F911283246950076288F /* Model.swift */,
 				06266780273C22DB0072201A /* Assets.xcassets */,
 				06266782273C22DB0072201A /* Preview Content */,
 			);
@@ -253,8 +259,10 @@
 				06602B6027441E9A009FFACD /* DeviceTraitStatus.swift in Sources */,
 				067CB253274120C500899DD3 /* SettingViewController.swift in Sources */,
 				06B812CE27410EEB00FD2F79 /* MeasurementViewController.swift in Sources */,
+				4B93F910283239820076288F /* MeasurementPresenter.swift in Sources */,
 				06B812D027410F0400FD2F79 /* SettingView.swift in Sources */,
 				4BA3CD6427ABA56600C60C20 /* ViewExtension.swift in Sources */,
+				4B93F912283246950076288F /* Model.swift in Sources */,
 				4BA3CD6227ABA47200C60C20 /* FullScreenModifier.swift in Sources */,
 				0626677F273C22D50072201A /* MesurementView.swift in Sources */,
 				4B9BC34C27A8148C00DBECBD /* AdController.swift in Sources */,
