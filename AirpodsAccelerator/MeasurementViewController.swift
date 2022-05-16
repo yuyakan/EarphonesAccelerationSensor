@@ -19,13 +19,19 @@ class MeasurementViewController: UIViewController, CMHeadphoneMotionManagerDeleg
     @Published var start = false
     @Published var status = "Waiting for measurement"
     @Published var stopSave = false
+    @ObservedObject var setting = SettingInfo.shared
     
     let Airpods = CMHeadphoneMotionManager()
     
-    private var input: MeasurementPresenterInput!
-    func inject(input: MeasurementPresenterInput) {
-        self.input = input
-    }
+    var graph: [Double] = []
+    
+    var time : [Double] = []
+    var nowTime: Double = 0.0
+    
+    var X : [Double] = []
+    var Y : [Double] = []
+    var Z : [Double] = []
+    var Total: [Double] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +52,13 @@ class MeasurementViewController: UIViewController, CMHeadphoneMotionManagerDeleg
         }
         start = true
         
-        input.initializeData()
+        graph = []
+        nowTime = 0.0
+        time.removeAll()
+        
+        X.removeAll()
+        Y.removeAll()
+        Z.removeAll()
     
         Airpods.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {[weak self] motion, error  in
             guard let motion = motion else { return }
@@ -56,9 +68,43 @@ class MeasurementViewController: UIViewController, CMHeadphoneMotionManagerDeleg
     }
     
     func getData(_ data: CMDeviceMotion){
+        let x, y, z : Double
+        
+        if self.setting.checkedSensor[0] {
+            x = data.userAcceleration.x
+            y = data.userAcceleration.y
+            z = data.userAcceleration.z
+            graph.append(abs(x) + abs(y) + abs(z))
+        }else if self.setting.checkedSensor[1] {
+            x = data.gravity.x
+            y = data.gravity.y
+            z = data.gravity.z
+            graph.append(z*z)
+        }else if self.setting.checkedSensor[2] {
+            x = data.rotationRate.x
+            y = data.rotationRate.y
+            z = data.rotationRate.z
+            graph.append((abs(x) + abs(y) + abs(z)) * 0.3)
+        }else {
+            x = data.attitude.pitch
+            y = data.attitude.roll
+            z = data.attitude.yaw
+            graph.append(y + 0.3)
+        }
+        
+        let t = data.timestamp
         status = "During measurement"
-        let t = input.getData(data: data)
-        timeCounter = String(format: "%0.2f",t)
+
+        if (nowTime == 0.0){
+            nowTime = t
+        }
+        
+        timeCounter = String(format: "%0.2f",t - nowTime)
+        time.append(t - nowTime)
+        
+        X.append(x)
+        Y.append(y)
+        Z.append(z)
     }
  
     func stopCalc(){
